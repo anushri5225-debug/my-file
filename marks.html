@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Marks - Smart Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5f0;
+
+            background-image: url("images/classroom.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(10, 45, 38, 0.60);
+
+            z-index: -1;
+        }
+
+
+        /* HEADER */
+
+        .header {
+            width: 90%;
+            margin: 25px auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .home {
+            text-decoration: none;
+
+            color: #176b4d;
+
+            background-color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+
+        /* MAIN */
+
+        .main {
+            width: 94%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+
+            font-size: 40px;
+
+            text-shadow: 2px 2px 6px black;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: white;
+
+            font-size: 17px;
+
+            margin-bottom: 20px;
+        }
+
+        .line {
+            width: 80px;
+
+            height: 4px;
+
+            background-color: white;
+
+            margin: 20px auto 30px;
+
+            border-radius: 10px;
+        }
+
+
+        /* TABLE */
+
+        .table-box {
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.30);
+
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 800px;
+        }
+
+        th {
+            background-color: #176b4d;
+
+            color: white;
+
+            padding: 13px;
+
+            font-size: 14px;
+        }
+
+        td {
+            padding: 12px;
+
+            border-bottom: 1px solid #ddd;
+
+            color: #333;
+
+            text-align: center;
+        }
+
+        tr:hover {
+            background-color: #f1f8f5;
+        }
+
+        .pass {
+            color: green;
+
+            font-weight: bold;
+        }
+
+        .percentage {
+            color: #176b4d;
+
+            font-weight: bold;
+        }
+
+
+        /* BACK BUTTON */
+
+        .back {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            text-decoration: none;
+
+            color: #176b4d;
+
+            background-color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+        .back:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+            SMART PORTAL
+        </div>
+
+        <a href="index.html" class="home">
+            🏠 Home
+        </a>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <h1>
+            📝 Student Marks
+        </h1>
+
+        <p class="subtitle">
+            BCS Student Examination Result
+        </p>
+
+        <div class="line"></div>
+
+
+        <!-- MARKS TABLE -->
+
+        <div class="table-box">
+
+            <table>
+
+                <tr>
+
+                    <th>Roll No.</th>
+
+                    <th>Student Name</th>
+
+                    <th>DBMS</th>
+
+                    <th>Software Eng.</th>
+
+                    <th>Web Tech.</th>
+
+                    <th>Communication</th>
+
+                    <th>Total</th>
+
+                    <th>Percentage</th>
+
+                    <th>Result</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>01</td>
+                    <td>Anushri</td>
+                    <td>85</td>
+                    <td>88</td>
+                    <td>90</td>
+                    <td>86</td>
+                    <td>349</td>
+                    <td class="percentage">87.25%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>02</td>
+                    <td>Dhanashri</td>
+                    <td>82</td>
+                    <td>80</td>
+                    <td>85</td>
+                    <td>84</td>
+                    <td>331</td>
+                    <td class="percentage">82.75%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>03</td>
+                    <td>Mahi</td>
+                    <td>78</td>
+                    <td>81</td>
+                    <td>80</td>
+                    <td>79</td>
+                    <td>318</td>
+                    <td class="percentage">79.50%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>04</td>
+                    <td>Devansh</td>
+                    <td>75</td>
+                    <td>77</td>
+                    <td>73</td>
+                    <td>78</td>
+                    <td>303</td>
+                    <td class="percentage">75.75%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>05</td>
+                    <td>Dhiraj</td>
+                    <td>70</td>
+                    <td>74</td>
+                    <td>72</td>
+                    <td>75</td>
+                    <td>291</td>
+                    <td class="percentage">72.75%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>06</td>
+                    <td>Suraj</td>
+                    <td>80</td>
+                    <td>76</td>
+                    <td>82</td>
+                    <td>78</td>
+                    <td>316</td>
+                    <td class="percentage">79.00%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>07</td>
+                    <td>Abhijit</td>
+                    <td>68</td>
+                    <td>70</td>
+                    <td>66</td>
+                    <td>69</td>
+                    <td>273</td>
+                    <td class="percentage">68.25%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>08</td>
+                    <td>Omkar</td>
+                    <td>79</td>
+                    <td>82</td>
+                    <td>77</td>
+                    <td>80</td>
+                    <td>318</td>
+                    <td class="percentage">79.50%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>09</td>
+                    <td>Urmila</td>
+                    <td>88</td>
+                    <td>85</td>
+                    <td>87</td>
+                    <td>90</td>
+                    <td>350</td>
+                    <td class="percentage">87.50%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>10</td>
+                    <td>Shital</td>
+                    <td>76</td>
+                    <td>78</td>
+                    <td>75</td>
+                    <td>77</td>
+                    <td>306</td>
+                    <td class="percentage">76.50%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>11</td>
+                    <td>Pooja</td>
+                    <td>91</td>
+                    <td>89</td>
+                    <td>92</td>
+                    <td>90</td>
+                    <td>362</td>
+                    <td class="percentage">90.50%</td>
+                    <td class="pass">PASS</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <a href="teacher.html" class="back">
+            ← Back to Teacher
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Teacher | Smart Teacher & Student Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5f0;
+            background-image: url("images/classroom.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+
+        /* Dark Background */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(10, 45, 38, 0.58);
+
+            z-index: -1;
+        }
+
+
+        /* Header */
+
+        .header {
+            width: 90%;
+            margin: 25px auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            text-shadow: 2px 2px 5px black;
+        }
+
+
+        /* Home Button */
+
+        .home-btn {
+
+            text-decoration: none;
+
+            background-color: white;
+
+            color: #176b4d;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .home-btn:hover {
+
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+
+        /* Main */
+
+        .main {
+
+            width: 90%;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 30px 0 50px;
+        }
+
+
+        .main h1 {
+
+            color: white;
+
+            font-size: 42px;
+
+            text-shadow: 3px 3px 7px black;
+
+            margin-bottom: 12px;
+        }
+
+
+        .main p {
+
+            color: #e8fff5;
+
+            font-size: 18px;
+
+            margin-bottom: 35px;
+
+            text-shadow: 2px 2px 5px black;
+        }
+
+
+        /* Cards */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .card {
+
+            background: rgba(255,255,255,0.92);
+
+            padding: 30px 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+        }
+
+
+        .icon {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card h2 {
+
+            color: #176b4d;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+
+            color: #555;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            margin-bottom: 18px;
+
+            text-shadow: none;
+        }
+
+
+        .card a {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: #176b4d;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .card a:hover {
+
+            background-color: #0d4d37;
+
+        }
+
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .main h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div class="logo">
+            SMART PORTAL
+        </div>
+
+        <a href="index.html" class="home-btn">
+            🏠 Home
+        </a>
+
+    </div>
+
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <h1>Teacher Dashboard</h1>
+
+        <p>
+            Manage teaching activities easily and efficiently
+        </p>
+
+
+        <!-- Cards -->
+
+        <div class="cards">
+
+
+            <!-- Attendance -->
+
+            <div class="card">
+
+                <div class="icon">📋</div>
+
+                <h2>Attendance</h2>
+
+                <p>
+                    Manage and maintain student attendance records.
+                </p>
+
+                <a href="attendance.html">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- Marks -->
+
+            <div class="card">
+
+                <div class="icon">📊</div>
+
+                <h2>Marks</h2>
+
+                <p>
+                    Add and manage student examination marks.
+                </p>
+
+                <a href="marks.html">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- Notes -->
+
+            <div class="card">
+
+                <div class="icon">📝</div>
+
+                <h2>Notes</h2>
+
+                <p>
+                    Share important study notes with students.
+                </p>
+
+                <a href="notes.html">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- Assignment -->
+
+            <div class="card">
+
+                <div class="icon">📚</div>
+
+                <h2>Assignment</h2>
+
+                <p>
+                    Create and manage student assignments.
+                </p>
+
+                <a href="assignment.html">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- Timetable -->
+
+            <div class="card">
+
+                <div class="icon">🗓️</div>
+
+                <h2>Timetable</h2>
+
+                <p>
+                    View and manage class schedules and lectures.
+                </p>
+
+                <a href="timetable.html">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- Student Progress -->
+
+            <div class="card">
+
+                <div class="icon">🎯</div>
+
+                <h2>Student Progress</h2>
+
+                <p>
+                    Track student performance and learning progress.
+                </p>
+
+                <a href="student progress.html">
+                    Open
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

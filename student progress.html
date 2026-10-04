@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Progress - Smart Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5f0;
+
+            background-image: url("images/classroom.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(10, 45, 38, 0.60);
+
+            z-index: -1;
+        }
+
+
+        /* HEADER */
+
+        .header {
+            width: 90%;
+
+            margin: 25px auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .home {
+            text-decoration: none;
+
+            color: #176b4d;
+
+            background-color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+
+        /* MAIN */
+
+        .main {
+            width: 94%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+
+            font-size: 40px;
+
+            text-shadow: 2px 2px 6px black;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: white;
+
+            font-size: 17px;
+
+            margin-bottom: 20px;
+        }
+
+        .line {
+            width: 80px;
+
+            height: 4px;
+
+            background-color: white;
+
+            margin: 20px auto 30px;
+
+            border-radius: 10px;
+        }
+
+
+        /* TABLE */
+
+        .table-box {
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.30);
+
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 800px;
+        }
+
+        th {
+            background-color: #176b4d;
+
+            color: white;
+
+            padding: 14px;
+        }
+
+        td {
+            padding: 14px;
+
+            border-bottom: 1px solid #ddd;
+
+            color: #333;
+
+            text-align: center;
+        }
+
+        tr:hover {
+            background-color: #f1f8f5;
+        }
+
+        .name {
+            color: #176b4d;
+
+            font-weight: bold;
+        }
+
+        .good {
+            color: green;
+
+            font-weight: bold;
+        }
+
+        .average {
+            color: #d88900;
+
+            font-weight: bold;
+        }
+
+
+        /* BACK BUTTON */
+
+        .back {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            text-decoration: none;
+
+            color: #176b4d;
+
+            background-color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+        .back:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+            SMART PORTAL
+        </div>
+
+        <a href="index.html" class="home">
+            🏠 Home
+        </a>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <h1>
+            📊 Student Progress
+        </h1>
+
+        <p class="subtitle">
+            Monitor student academic performance
+        </p>
+
+        <div class="line"></div>
+
+
+        <!-- PROGRESS TABLE -->
+
+        <div class="table-box">
+
+            <table>
+
+                <tr>
+
+                    <th>Roll No.</th>
+
+                    <th>Student Name</th>
+
+                    <th>Attendance</th>
+
+                    <th>Percentage</th>
+
+                    <th>Assignments</th>
+
+                    <th>Performance</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>01</td>
+
+                    <td class="name">Anushri</td>
+
+                    <td>94%</td>
+
+                    <td>87.25%</td>
+
+                    <td>4 / 4</td>
+
+                    <td class="good">Excellent</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>02</td>
+
+                    <td class="name">Dhanashri</td>
+
+                    <td>90%</td>
+
+                    <td>82.75%</td>
+
+                    <td>4 / 4</td>
+
+                    <td class="good">Very Good</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>03</td>
+
+                    <td class="name">Mahi</td>
+
+                    <td>86%</td>
+
+                    <td>79.50%</td>
+
+                    <td>3 / 4</td>
+
+                    <td class="good">Good</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>04</td>
+
+                    <td class="name">Devansh</td>
+
+                    <td>80%</td>
+
+                    <td>75.75%</td>
+
+                    <td>3 / 4</td>
+
+                    <td class="good">Good</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>05</td>
+
+                    <td class="name">Dhiraj</td>
+
+                    <td>76%</td>
+
+                    <td>72.75%</td>
+
+                    <td>3 / 4</td>
+
+                    <td class="average">Average</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>06</td>
+
+                    <td class="name">Suraj</td>
+
+                    <td>88%</td>
+
+                    <td>79.00%</td>
+
+                    <td>4 / 4</td>
+
+                    <td class="good">Good</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>07</td>
+
+                    <td class="name">Abhijit</td>
+
+                    <td>70%</td>
+
+                    <td>68.25%</td>
+
+                    <td>2 / 4</td>
+
+                    <td class="average">Needs Improvement</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>08</td>
+
+                    <td class="name">Omkar</td>
+
+                    <td>84%</td>
+
+                    <td>79.50%</td>
+
+                    <td>4 / 4</td>
+
+                    <td class="good">Good</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>09</td>
+
+                    <td class="name">Urmila</td>
+
+                    <td>92%</td>
+
+                    <td>87.50%</td>
+
+                    <td>4 / 4</td>
+
+                    <td class="good">Excellent</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>10</td>
+
+                    <td class="name">Shital</td>
+
+                    <td>82%</td>
+
+                    <td>76.50%</td>
+
+                    <td>3 / 4</td>
+
+                    <td class="good">Good</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>11</td>
+
+                    <td class="name">Pooja</td>
+
+                    <td>96%</td>
+
+                    <td>90.50%</td>
+
+                    <td>4 / 4</td>
+
+                    <td class="good">Excellent</td>
+
+                </tr>
+
+
+            </table>
+
+        </div>
+
+
+        <a href="teacher.html" class="back">
+            ← Back to Teacher
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

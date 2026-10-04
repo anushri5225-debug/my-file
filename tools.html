@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Useful Tools - Smart Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5f0;
+            background-image: url("images/classroom.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 45, 38, 0.60);
+            z-index: -1;
+        }
+
+        .header {
+            width: 90%;
+            margin: 25px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .home {
+            background-color: white;
+            color: #176b4d;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background-color: #176b4d;
+            color: white;
+        }
+
+        .main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .main h1 {
+            color: white;
+            font-size: 42px;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        .subtitle {
+            color: white;
+            font-size: 17px;
+            margin-top: 10px;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+            background-color: white;
+            margin: 20px auto 35px;
+            border-radius: 10px;
+        }
+
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .tool-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .tool-box h2 {
+            color: #176b4d;
+            margin-bottom: 15px;
+        }
+
+        .tool-box p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 7px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #176b4d;
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #0d4d37;
+        }
+
+        .result {
+            margin-top: 15px;
+            color: #176b4d;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        @media (max-width: 700px) {
+
+            .tools {
+                grid-template-columns: 1fr;
+            }
+
+            .main h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="logo">
+            SMART PORTAL
+        </div>
+
+        <a href="index.html" class="home">
+            🏠 Home
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <h1>🧮 Useful Tools</h1>
+
+        <p class="subtitle">
+            Simple tools for students and teachers
+        </p>
+
+        <div class="line"></div>
+
+
+        <div class="tools">
+
+
+            <!-- Percentage Calculator -->
+
+            <div class="tool-box">
+
+                <h2>📊 Percentage Calculator</h2>
+
+                <p>Calculate your percentage easily.</p>
+
+                <input type="number" id="marks"
+                       placeholder="Enter obtained marks">
+
+                <input type="number" id="total"
+                       placeholder="Enter total marks">
+
+                <br>
+
+                <button onclick="percentage()">
+                    Calculate
+                </button>
+
+                <div class="result" id="percentageResult"></div>
+
+            </div>
+
+
+            <!-- Attendance Calculator -->
+
+            <div class="tool-box">
+
+                <h2>📅 Attendance Calculator</h2>
+
+                <p>Calculate your attendance percentage.</p>
+
+                <input type="number" id="present"
+                       placeholder="Classes attended">
+
+                <input type="number" id="classes"
+                       placeholder="Total classes">
+
+                <br>
+
+                <button onclick="attendance()">
+                    Calculate
+                </button>
+
+                <div class="result" id="attendanceResult"></div>
+
+            </div>
+
+
+            <!-- CGPA Calculator -->
+
+            <div class="tool-box">
+
+                <h2>🎓 CGPA Calculator</h2>
+
+                <p>Convert CGPA into percentage.</p>
+
+                <input type="number" id="cgpa"
+                       placeholder="Enter CGPA">
+
+                <br>
+
+                <button onclick="cgpa()">
+                    Calculate
+                </button>
+
+                <div class="result" id="cgpaResult"></div>
+
+            </div>
+
+
+            <!-- Simple Calculator -->
+
+            <div class="tool-box">
+
+                <h2>🔢 Simple Calculator</h2>
+
+                <p>Perform basic calculations.</p>
+
+                <input type="number" id="num1"
+                       placeholder="Enter first number">
+
+                <input type="number" id="num2"
+                       placeholder="Enter second number">
+
+                <br>
+
+                <button onclick="add()">+</button>
+
+                <button onclick="subtract()">−</button>
+
+                <button onclick="multiply()">×</button>
+
+                <button onclick="divide()">÷</button>
+
+                <div class="result" id="calcResult"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function percentage() {
+
+            var marks = Number(document.getElementById("marks").value);
+            var total = Number(document.getElementById("total").value);
+
+            if (total > 0) {
+
+                var result = (marks / total) * 100;
+
+                document.getElementById("percentageResult").innerHTML =
+                    "Percentage = " + result.toFixed(2) + "%";
+
+            } else {
+
+                document.getElementById("percentageResult").innerHTML =
+                    "Please enter valid marks.";
+
+            }
+        }
+
+
+        function attendance() {
+
+            var present = Number(document.getElementById("present").value);
+            var classes = Number(document.getElementById("classes").value);
+
+            if (classes > 0) {
+
+                var result = (present / classes) * 100;
+
+                document.getElementById("attendanceResult").innerHTML =
+                    "Attendance = " + result.toFixed(2) + "%";
+
+            } else {
+
+                document.getElementById("attendanceResult").innerHTML =
+                    "Please enter valid classes.";
+
+            }
+        }
+
+
+        function cgpa() {
+
+            var value = Number(document.getElementById("cgpa").value);
+
+            if (value >= 0) {
+
+                var result = value * 9.5;
+
+                document.getElementById("cgpaResult").innerHTML =
+                    "Percentage = " + result.toFixed(2) + "%";
+
+            } else {
+
+                document.getElementById("cgpaResult").innerHTML =
+                    "Please enter valid CGPA.";
+
+            }
+        }
+
+
+        function add() {
+
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+
+            document.getElementById("calcResult").innerHTML =
+                "Result = " + (a + b);
+        }
+
+
+        function subtract() {
+
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+
+            document.getElementById("calcResult").innerHTML =
+                "Result = " + (a - b);
+        }
+
+
+        function multiply() {
+
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+
+            document.getElementById("calcResult").innerHTML =
+                "Result = " + (a * b);
+        }
+
+
+        function divide() {
+
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+
+            if (b != 0) {
+
+                document.getElementById("calcResult").innerHTML =
+                    "Result = " + (a / b);
+
+            } else {
+
+                document.getElementById("calcResult").innerHTML =
+                    "Cannot divide by zero.";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

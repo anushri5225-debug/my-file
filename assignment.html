@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Assignments - Smart Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5f0;
+
+            background-image: url("images/classroom.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(10, 45, 38, 0.60);
+
+            z-index: -1;
+        }
+
+
+        /* HEADER */
+
+        .header {
+            width: 90%;
+            margin: 25px auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .home {
+            text-decoration: none;
+
+            color: #176b4d;
+
+            background-color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+
+        /* MAIN */
+
+        .main {
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 45px auto;
+
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+
+            font-size: 40px;
+
+            text-shadow: 2px 2px 6px black;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: white;
+
+            font-size: 17px;
+
+            margin-bottom: 20px;
+        }
+
+        .line {
+            width: 80px;
+
+            height: 4px;
+
+            background-color: white;
+
+            margin: 20px auto 30px;
+
+            border-radius: 10px;
+        }
+
+
+        /* ASSIGNMENT TABLE */
+
+        .assignment-box {
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.30);
+
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 700px;
+        }
+
+        th {
+            background-color: #176b4d;
+
+            color: white;
+
+            padding: 14px;
+        }
+
+        td {
+            padding: 14px;
+
+            border-bottom: 1px solid #ddd;
+
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #f1f8f5;
+        }
+
+        .subject {
+            color: #176b4d;
+
+            font-weight: bold;
+        }
+
+        .pending {
+            color: #d88900;
+
+            font-weight: bold;
+        }
+
+        .completed {
+            color: green;
+
+            font-weight: bold;
+        }
+
+
+        /* VIEW BUTTON */
+
+        .btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: #176b4d;
+
+            color: white;
+
+            padding: 8px 18px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #0d4935;
+        }
+
+
+        /* BACK BUTTON */
+
+        .back {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            text-decoration: none;
+
+            color: #176b4d;
+
+            background-color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+        .back:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+            SMART PORTAL
+        </div>
+
+        <a href="index.html" class="home">
+            🏠 Home
+        </a>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <h1>
+            📚 Assignments
+        </h1>
+
+        <p class="subtitle">
+            Manage and view student assignments
+        </p>
+
+        <div class="line"></div>
+
+
+        <!-- ASSIGNMENT TABLE -->
+
+        <div class="assignment-box">
+
+            <table>
+
+                <tr>
+
+                    <th>No.</th>
+
+                    <th>Subject</th>
+
+                    <th>Assignment</th>
+
+                    <th>Due Date</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+
+                <!-- DBMS -->
+
+                <tr>
+
+                    <td>01</td>
+
+                    <td class="subject">
+                        DBMS
+                    </td>
+
+                    <td>
+                        SQL Queries and Commands
+                    </td>
+
+                    <td>
+                        10 Oct 2026
+                    </td>
+
+                    <td class="pending">
+                        Pending
+                    </td>
+
+                    <td>
+                        <a href="#" class="btn">
+                            View
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <!-- SOFTWARE ENGINEERING -->
+
+                <tr>
+
+                    <td>02</td>
+
+                    <td class="subject">
+                        Software Engineering
+                    </td>
+
+                    <td>
+                        Prepare SDLC Model Diagram
+                    </td>
+
+                    <td>
+                        15 Oct 2026
+                    </td>
+
+                    <td class="completed">
+                        Completed
+                    </td>
+
+                    <td>
+                        <a href="#" class="btn">
+                            View
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <!-- PROGRAMMING -->
+
+                <tr>
+
+                    <td>03</td>
+
+                    <td class="subject">
+                        Programming
+                    </td>
+
+                    <td>
+                        C++ OOP Programs
+                    </td>
+
+                    <td>
+                        18 Oct 2026
+                    </td>
+
+                    <td class="pending">
+                        Pending
+                    </td>
+
+                    <td>
+                        <a href="#" class="btn">
+                            View
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <!-- COMMUNICATION -->
+
+                <tr>
+
+                    <td>04</td>
+
+                    <td class="subject">
+                        Communication
+                    </td>
+
+                    <td>
+                        AM and FM Communication
+                    </td>
+
+                    <td>
+                        20 Oct 2026
+                    </td>
+
+                    <td class="pending">
+                        Pending
+                    </td>
+
+                    <td>
+                        <a href="#" class="btn">
+                            View
+                        </a>
+                    </td>
+
+                </tr>
+
+
+            </table>
+
+        </div>
+
+
+        <a href="teacher.html" class="back">
+            ← Back to Teacher
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

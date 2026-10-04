@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Study Material | Smart Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5f0;
+            background-image: url("images/classroom.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+
+        /* Background Overlay */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(10, 45, 38, 0.58);
+
+            z-index: -1;
+        }
+
+
+        /* Header */
+
+        .header {
+            width: 90%;
+            margin: 25px auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            text-shadow: 2px 2px 5px black;
+        }
+
+
+        .home-btn {
+            text-decoration: none;
+
+            background-color: white;
+
+            color: #176b4d;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+        }
+
+
+        .home-btn:hover {
+            background-color: #176b4d;
+
+            color: white;
+        }
+
+
+        /* Main */
+
+        .main {
+            width: 90%;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 30px 0 50px;
+        }
+
+
+        .main h1 {
+            color: white;
+
+            font-size: 42px;
+
+            text-shadow: 3px 3px 7px black;
+
+            margin-bottom: 12px;
+        }
+
+
+        .main > p {
+            color: #e8fff5;
+
+            font-size: 18px;
+
+            margin-bottom: 35px;
+
+            text-shadow: 2px 2px 5px black;
+        }
+
+
+        /* Subject Cards */
+
+        .subjects {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .subject {
+            background: rgba(255,255,255,0.93);
+
+            padding: 30px 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .subject:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+        }
+
+
+        .icon {
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .subject h2 {
+            color: #176b4d;
+
+            font-size: 21px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .subject p {
+            color: #555;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            margin-bottom: 18px;
+        }
+
+
+        .subject a {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: #176b4d;
+
+            color: white;
+
+            padding: 10px 22px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+        }
+
+
+        .subject a:hover {
+            background-color: #0d4d37;
+        }
+
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            .subjects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .subjects {
+                grid-template-columns: 1fr;
+            }
+
+            .main h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div class="logo">
+            SMART PORTAL
+        </div>
+
+        <a href="index.html" class="home-btn">
+            🏠 Home
+        </a>
+
+    </div>
+
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <h1>Study Material</h1>
+
+        <p>
+            Find useful learning resources for your subjects
+        </p>
+
+
+        <div class="subjects">
+
+
+            <!-- Programming -->
+
+            <div class="subject">
+
+                <div class="icon">💻</div>
+
+                <h2>Programming</h2>
+
+                <p>
+                    Learn programming concepts, examples and important notes.
+                </p>
+
+                <a href="#">
+                    View Notes
+                </a>
+
+            </div>
+
+
+            <!-- DBMS -->
+
+            <div class="subject">
+
+                <div class="icon">🗄️</div>
+
+                <h2>DBMS</h2>
+
+                <p>
+                    Database concepts, SQL commands and important topics.
+                </p>
+
+                <a href="#">
+                    View Notes
+                </a>
+
+            </div>
+
+
+            <!-- Software Engineering -->
+
+            <div class="subject">
+
+                <div class="icon">⚙️</div>
+
+                <h2>Software Engineering</h2>
+
+                <p>
+                    SDLC, testing, models and software development concepts.
+                </p>
+
+                <a href="#">
+                    View Notes
+                </a>
+
+            </div>
+
+
+            <!-- Web Technology -->
+
+            <div class="subject">
+
+                <div class="icon">🌐</div>
+
+                <h2>Web Technology</h2>
+
+                <p>
+                    HTML, CSS, web design and basic website development.
+                </p>
+
+                <a href="#">
+                    View Notes
+                </a>
+
+            </div>
+
+
+            <!-- Communication -->
+
+            <div class="subject">
+
+                <div class="icon">📡</div>
+
+                <h2>Communication</h2>
+
+                <p>
+                    Digital communication, signals and communication concepts.
+                </p>
+
+                <a href="#">
+                    View Notes
+                </a>
+
+            </div>
+
+
+            <!-- Exam Preparation -->
+
+            <div class="subject">
+
+                <div class="icon">🎓</div>
+
+                <h2>Exam Preparation</h2>
+
+                <p>
+                    Important questions, MCQs and revision material for exams.
+                </p>
+
+                <a href="#">
+                    Start Learning
+                </a>
+
+            </div>
+
+
+        </div>
+
+   
+
+
+
+</body>
+</html>
